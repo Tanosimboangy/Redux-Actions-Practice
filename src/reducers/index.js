@@ -1,8 +1,20 @@
 import { combineReducers } from "redux";
 
 // incomplete reducer function that checks an action prop type to detemine a counter number
-function currentCount(state=0){
-  return state;
+function currentCount(count = 0, action){
+  switch(action.type) {
+    case "INCREASE" :
+      return count + 1;
+    case "DECREASE" :
+      return count - 1;
+    default: 
+      return count;
+  }
+}
+
+// complete reducer function that should check action prop type ""SET_SPECIAL_TEXT" to determine state value
+function specialText(text = ""){
+  return text;
 }
 
 // incomplete reducer function that should check an action prop type to return an array of users
@@ -35,11 +47,6 @@ function imageScale(state=1){
 }
 
 function searchText(state=""){
-  return state;
-}
-
-// complete reducer function that should check action prop type ""SET_SPECIAL_TEXT" to determine state value
-function specialText(state=""){
   return state;
 }
 
