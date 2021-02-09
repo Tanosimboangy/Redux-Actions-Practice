@@ -4,9 +4,9 @@ import React from 'react';
 import Users from "./containers/Users";
 
 // components
-import CounterButton from "./containers/CounterButton";
+import CounterButton from "./components/CounterButton";
 import SpecialTextBox from "./containers/SpecialTextBox";
-import Counter from "./containers/Counter";
+import Counter from "./components/Counter";
 import SpecialText from "./containers/SpecialText";
 import UserButtons from "./components/UserButtons";
 import Thermostat from "./components/Thermostat";

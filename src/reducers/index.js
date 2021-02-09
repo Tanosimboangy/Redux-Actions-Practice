@@ -13,21 +13,35 @@ function currentCount(count = 0, action){
 }
 
 // complete reducer function that should check action prop type ""SET_SPECIAL_TEXT" to determine state value
-function specialText(text = ""){
-  return text;
+function specialText(text = "", action){
+  switch(action.type) {
+    case "SPECIAL_TEXT":
+      return action.value;
+    default:
+      return text;
+  }
 }
 
 // incomplete reducer function that should check an action prop type to return an array of users
-function users(state =[]){
-  return state;
+function users(state =[], action){
+  switch (action.type) {
+    // case "SEARCH_USER_BY_FIRSTNAME":
+    default:
+      return state;
+  }
 }
 
 function currentCity(state=""){
   return state;
 }
 
-function currentTemp(state=0){
-  return state;
+function currentTemp(state = 0, action){
+  switch (action.type) {
+    case "SET_CURRENT_TEMP":
+      return action.value
+    default:
+      return state
+  }
 }
 
 function displayModal(state=false){
@@ -38,16 +52,26 @@ function imageUrl(state=""){
   return state
 }
 
-function currentUserSort(state="first_name"){
-  return state;
+function currentUserSort(state="first_name", action){
+  switch (action.type) {
+    case "CURRENT_USER_SORT":
+      return action.value;
+    default:
+      return state;
+  }
 }
 
 function imageScale(state=1){
   return state
 }
 
-function searchText(state=""){
-  return state;
+function searchText(state="", action) {
+  switch (action.type) {
+    case "SEARCH_USER_BY_FIRSTNAME":
+      return action.value;
+    default:
+      return state;
+  }
 }
 
 export default combineReducers({
