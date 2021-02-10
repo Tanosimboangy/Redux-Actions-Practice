@@ -1,5 +1,5 @@
-import {connect } from "react-redux"
-import {currentTemp} from "../actions"
-import ChangeTemperature from "../components/ChangeTemperature"
+import { connect } from 'react-redux';
+import { setCurrentTemp } from '../actions';
+import ChangeTemperature from '../components/ChangeTemperature';
 
-export default connect (null, {set: currentTemp}) (ChangeTemperature);
+export default connect(null, { set: setCurrentTemp })(ChangeTemperature);

@@ -1,5 +1,7 @@
-import {connect } from "react-redux"
-import {setCurrentTemperature} from "../actions"
-import Thermostat from "../components/Thermostat"
+import { connect } from 'react-redux';
+import Thermostat from '../components/Thermostat';
 
-export default connect ((state) => ({temp: state.currentTemp}), {}) (Thermostat);
+export default connect(
+	(state) => ({ temp: state.currentTemp }),
+	{}
+)(Thermostat);

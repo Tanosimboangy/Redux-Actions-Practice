@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Counter({count}) {
+function Counter({ count }) {
   return (
       <div>
         Counter: {count !== undefined ? count : "null"}
