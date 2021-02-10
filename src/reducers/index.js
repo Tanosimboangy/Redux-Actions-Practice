@@ -31,8 +31,14 @@ function users(state =[], action){
   }
 }
 
-function currentCity(state=""){
-  return state;
+function currentCity(state="", action){
+  switch(action.type) {
+    case "SET_CURRENT_CITY":{
+      return action.value
+    }
+    default:
+      return state;
+  }
 }
 
 function currentTemp(state = 0, action){
